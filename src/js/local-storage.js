@@ -59,13 +59,20 @@ const addToQueuedListToStorage = function (currentCardId) {
 };
 
 // test
-addToWatchedListToStorage(1);
-addToWatchedListToStorage(1);
-addToWatchedListToStorage(2);
-addToWatchedListToStorage(3);
+// addToWatchedListToStorage(1);
+// addToWatchedListToStorage(1);
+// addToWatchedListToStorage(2);
+// addToWatchedListToStorage(3);
 
-addToQueuedListToStorage(1);
-addToQueuedListToStorage(1);
-addToQueuedListToStorage(2);
-addToQueuedListToStorage(4);
-addToQueuedListToStorage(3);
+// addToQueuedListToStorage(1);
+// addToQueuedListToStorage(1);
+// addToQueuedListToStorage(2);
+// addToQueuedListToStorage(4);
+// addToQueuedListToStorage(3);
+
+export {
+  getWatchedListFromLocal,
+  getQueuedListFromLocal,
+  addToWatchedListToStorage,
+  addToQueuedListToStorage,
+};
