@@ -1,6 +1,7 @@
 let watched = [];
 let queue = [];
 
+// array for testing
 const films = [
   { id: 1, title: 'bloody-cat', genre: 'horror', raiting: 2 },
   { id: 2, title: 'funny-cat', genre: 'comedy', raiting: 8 },
