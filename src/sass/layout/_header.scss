@@ -1,0 +1,142 @@
+.header {
+    background-image: linear-gradient(to right, 
+    $background-filter-header, $background-filter-header), url('/images/header/rectangle_@1x_mob.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    width: 100%;
+    height: 230px;
+
+    padding: 46px 0 43px;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+        background-image: linear-gradient(to right, 
+        $background-filter-header, $background-filter-header), url('/images/header/rectangle_@2x_mob.jpg');
+      }
+
+    @media screen and (min-width: $tablet){
+        background-image: linear-gradient(to right, 
+        $background-filter-header, $background-filter-header), url('/images/header/rectangle_@1x_tab.jpg');
+
+        padding: 41px 0 59px;
+
+        @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right, 
+            $background-filter-header, $background-filter-header), url('/images/header/rectangle_@2x_tab.jpg');
+          }
+    }
+
+    @media screen and (min-width: $desktop){
+        background-image: linear-gradient(to right, 
+        $background-filter-header, $background-filter-header), url('/images/header/rectangle_@1x.jpg');
+
+        @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right, 
+            $background-filter-header, $background-filter-header), url('/images/header/rectangle_@2x.jpg');
+          }
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: baseline;
+
+        margin-bottom: 30px;
+    }
+
+    &__search {
+        width: 280px;
+        height: 20px;
+
+        margin: 0 auto;
+        padding: 4px 0;
+
+        display: flex;
+        flex-direction: column;
+
+        border: 0;
+
+        border-bottom: 0.5px solid $color-light-main;
+
+        background-color: transparent;
+        color: $color-light-main;
+
+        font-size: 14px;
+        font-weight: 400;
+
+        @media screen and (min-width: $tablet){
+            width: 336px;
+        }
+    }
+
+    &__search::placeholder {
+        color: $color-light-main;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    padding: 8px 0;
+
+    &__icon {
+        @media screen and (min-width: $tablet){
+            margin-right: 10px;
+        }
+    }
+
+    &__link {
+        font-size: 30px;
+        font-weight: 500;
+        font-family: $font-family-main;
+        color: $color-light-main;
+
+        display: none;
+
+        @media screen and (min-width: $tablet){
+            display: inline-block;
+        }
+    }
+}
+
+.navigation {
+    margin-left: auto;
+    margin-right: 0;
+
+    &__list {
+        display: flex;
+        padding-left: 0;
+        margin: 0;
+
+        list-style-type: none;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 39px;
+    }
+
+    &__link {
+        text-transform: uppercase;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+
+        color: $color-light-main;
+
+        font-family: $font-family-main;
+        font-weight: 500;
+        font-size: 12px;
+
+        padding: 8px 0;
+    }
+}
+
+.current::after {
+        content: '';
+
+        width: 100%;
+        height: 3px;
+
+        background-color: $color-accent;
+}
