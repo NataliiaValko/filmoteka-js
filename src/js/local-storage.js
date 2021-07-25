@@ -8,35 +8,35 @@ const films = [
   { id: 4, title: 'crazy-cat', genre: 'thriller', raiting: 4 },
 ];
 
-// GET DATA FROM LOCAL STORAGE //
+//***** GET DATA FROM LOCAL STORAGE *****//
 
-//***** Функция получения данных о просмотренных фильмах из Local Storage *****//
+//FUNCTION get data about watched films from Local Storage
 const getWatchedListFromLocal = function () {
   const watched = localStorage.getItem('watched');
   const parseWatched = JSON.parse(watched);
   return parseWatched;
-  //вернет массив объектов из LocalStorage
+  //returns array of objects from LocalStorage
 };
 
-// Функция получения данных о фильмах в очереди  из Local Storage
+// FUNCTION get data about queued films from Local Storage
 const getQueuedListFromLocal = function () {
   const queued = localStorage.getItem('queue');
   const parseQueued = JSON.parse(queued);
   return parseQueued;
-  //вернет массив объектов из LocalStorage
+  //returns array of objects from LocalStorage
 };
 
 // test
-console.log(getWatchedListFromLocal());
-console.log(getQueuedListFromLocal());
+// console.log(getWatchedListFromLocal());
+// console.log(getQueuedListFromLocal());
 
 //***** SET DATA TO LOCAL STORAGE *****//
 
-// Функция добавления фильма в Local Storage  (Watched)
+// FUNCTION add data to Local Storage  (Watched)
 const addToWatchedListToStorage = function (currentCardId) {
   films.map(item => {
     if (currentCardId === item.id) {
-      // если id текущей карточки = id карточки из массива объектов с сервера, то добавляем карточку в массив
+      // if id of current card = id of card in array of objects from server => add card to the array (LOCAL STORAGE)
       watched.push(item);
       // clean array from duplicates
       watched = [...new Set(watched)];
@@ -45,13 +45,11 @@ const addToWatchedListToStorage = function (currentCardId) {
   });
 };
 
-// Функция добавления фильма в Local Storage  (Watched)
+// FUNCTION add data to Local Storage Local Storage  (Queued)
 const addToQueuedListToStorage = function (currentCardId) {
   films.map(item => {
     if (currentCardId === item.id) {
-      // если id текущей карточки = id карточки из массива объектов с сервера, то добавляем карточку в массив
       queue.push(item);
-
       queue = [...new Set(queue)];
       localStorage.setItem('queue', JSON.stringify(queue));
     }
