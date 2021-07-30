@@ -45,6 +45,36 @@
     }
 }
 
+.header.authorized {
+    background-image: linear-gradient(to right, 
+    $background-filter-header, $background-filter-header), url('/images/header/rectangle2_@1x_mob.jpg');
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+        background-image: linear-gradient(to right, 
+        $background-filter-header, $background-filter-header), url('/images/header/rectangle2_@2x_mob.jpg');
+      }
+
+    @media screen and (min-width: $tablet){
+        background-image: linear-gradient(to right, 
+        $background-filter-header, $background-filter-header), url('/images/header/rectangle2_@1x_tab.jpg');
+
+        @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right, 
+            $background-filter-header, $background-filter-header), url('/images/header/rectangle2_@2x_tab.jpg');
+          }
+    }
+
+    @media screen and (min-width: $desktop){
+        background-image: linear-gradient(to right, 
+        $background-filter-header, $background-filter-header), url('/images/header/rectangle2_@1x.jpg');
+
+        @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right, 
+            $background-filter-header, $background-filter-header), url('/images/header/rectangle2_@2x.jpg');
+          }
+    }
+}
+
 .logo {
     display: flex;
     align-items: baseline;
@@ -153,7 +183,7 @@
 
         border: 0;
 
-        border-bottom: 0.5px solid $color-light-main;
+        border-bottom: 1px solid $color-light-main;
 
         background-color: transparent;
         color: $color-light-main;
