@@ -3,10 +3,8 @@
 overflow-y: auto;
 display: block;
 }
-// MODAL
 
 .modal{
-
   position: absolute;
   left: 50%;
   top: 20px;
@@ -18,7 +16,7 @@ display: block;
   @media screen and (min-width: $tablet) {
     width: 618px;
     padding: 42px 30px 40px 28px;
-    top: 80px;
+    top: 80px; 
   }
 
   @media screen and (min-width: $desktop) {
@@ -29,7 +27,6 @@ display: block;
 }
 
 .modal__box-img{
-
   overflow: hidden;
   border-radius: 5px;
   margin-bottom: 30px;
