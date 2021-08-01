@@ -1,77 +1,81 @@
 // MODAL
 
-.modal{
-  position: relative;
-  width: 280px;
-  height: 95vh;
-  background-color: #fff;
+.basicLightbox.basicLightbox--visible {
   overflow-y: auto;
+  display: block;
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translate(-50%, 0);
+  width: 280px;
+  background-color: $color-light-main;
   padding: 48px 20px 41px;
 
   @media screen and (min-width: $tablet) {
     width: 618px;
     padding: 42px 30px 40px 28px;
-  
+    top: 80px;
   }
 
   @media screen and (min-width: $desktop) {
     width: 882px;
     padding: 50px 30px 41px;
-    
   }
 }
 
-.modal__box-img{
+.modal__box-img {
   overflow: hidden;
   border-radius: 5px;
   margin-bottom: 30px;
 
-    @media screen and(min-width:$tablet){
-      margin-right: 32px;
-      margin-bottom: 0;
-    }
+  @media screen and(min-width:$tablet) {
+    margin-right: 32px;
+    margin-bottom: 0;
   }
+}
 
-  .modal__box-img,
-  .description{
-    @media screen and(min-width:$tablet){
-      width: 50%;
-    }
-    
+.modal__box-img,
+.description {
+  @media screen and(min-width:$tablet) {
+    width: 50%;
   }
-  
-  .modal__icon--close{
-    width: 14px;
-    height: 14px;
-    fill: $color-dark-main;
-  }
+}
 
-  .modal__poster{
-    width: 100%;
-  }
+.modal__icon--close {
+  width: 14px;
+  height: 14px;
+  fill: $color-dark-main;
+}
 
-  .modal__box {
-    margin-bottom: 21px;
+.modal__poster {
+  width: 100%;
+}
+
+.modal__box {
+  margin-bottom: 21px;
 
   @media screen and(min-width:$tablet) {
-        display: flex;
-        justify-content: space-around;
-      }
-
-      &--item {
-        margin: 15px;
-        @media screen and(min-width:$tablet) {
-          width: calc((100% - 3 * 30px) / 2);
-        }
-      }   
+    display: flex;
+    justify-content: space-around;
   }
+
+  &--item {
+    margin: 15px;
+    @media screen and(min-width:$tablet) {
+      width: calc((100% - 3 * 30px) / 2);
+    }
+  }
+}
 
 // Description
 
 .description__title {
   text-transform: uppercase;
   font-size: 20px;
-  line-height: 1.150;
+  line-height: 1.15;
   margin-bottom: 20px;
   color: $color-dark-main;
 
@@ -80,20 +84,22 @@
   }
 }
 
-.description__list{
+.description__list {
   margin-bottom: 20px;
 }
 
-.description__votes--wrapper{
-  display: flex;  
+.description__votes--wrapper {
+  display: flex;
 }
 
 .description__bg--accent,
 .description__votes--secondary {
-  display: flex;  
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 36px;
+  min-width: 36px;
+  padding-left: 5px;
+  padding-right: 5px;
   height: 16px;
   border-radius: 5px;
 }
@@ -106,12 +112,12 @@
   background-color: $color-accent-secondary;
 }
 
-.description__name{
+.description__name {
   width: 108px;
 }
 
 .description__item {
-  display: flex;  
+  display: flex;
   color: $color-text-secondary;
 
   &:not(:last-child) {
@@ -168,7 +174,7 @@
 
 // BUTTONS
 
-.buttons__list{
+.buttons__list {
   display: flex;
   margin-top: -15px;
   margin-left: -15px;
@@ -183,10 +189,10 @@
   }
 }
 
-.buttons__item{
+.buttons__item {
   margin-top: 15px;
   margin-left: 15px;
-  width: calc((100% - 2 * 15px) /3)
+  width: calc((100% - 2 * 15px) / 3);
 }
 
 .buttons__modal {
@@ -195,43 +201,42 @@
   border-radius: 5px;
   line-height: 1.33;
   padding: 0;
-  text-transform: uppercase;  
+  text-transform: uppercase;
 }
 
 .buttons__modal--accent {
-  color: $color-light-main;    
+  color: $color-light-main;
   background-color: $color-accent;
   border: none;
 }
 
-.buttons__modal--secondary {    
+.buttons__modal--secondary {
   border: 1px solid $color-dark-main;
   background-color: transparent;
   color: $color-dark-main;
 }
 
 .btn__close {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    width: 30px;
-    height: 30px;
-    background-color: transparent;
-    padding: 0;
-    border: none;
-    color: #000;
-    fill: currentColor;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  color: #000;
+  fill: currentColor;
 }
 
 .btn__close .material-icons {
   font-size: 20px;
 }
 
-  .no__scroll{
+.no__scroll {
   overflow: hidden;
 }
 
 .btn__close .material-icons {
   font-size: 20px;
 }
-
