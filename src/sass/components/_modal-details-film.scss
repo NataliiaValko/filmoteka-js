@@ -1,11 +1,12 @@
+// BACKDROP
+.basicLightbox.basicLightbox--visible {
+overflow-y: auto;
+display: block;
+}
 // MODAL
 
-.basicLightbox.basicLightbox--visible {
-  overflow-y: auto;
-  display: block;
-}
+.modal{
 
-.modal {
   position: absolute;
   left: 50%;
   top: 20px;
@@ -23,10 +24,12 @@
   @media screen and (min-width: $desktop) {
     width: 882px;
     padding: 50px 30px 41px;
+
   }
 }
 
-.modal__box-img {
+.modal__box-img{
+
   overflow: hidden;
   border-radius: 5px;
   margin-bottom: 30px;

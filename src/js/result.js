@@ -17,8 +17,16 @@ const addClass = (ref, newClass) => {
   ref.classList.add(newClass);
 }
 
+
 const onErrorMessage = (error) => {
   console.log(error)
+
+const addPaginationSearch = (data) => {
+    if(data.total_pages > 1) {     
+        renderPaginationSearchMovie(requestServiсe.query, data.total_pages);
+    }
+    return data   
+
 }
 
 const addPaginationTranding = data => {
@@ -196,3 +204,25 @@ export {
   renderingLibraryCardsList,
   renderingSearchCardsList,
 };
+
+}
+
+const renderingSearchCardsList = (searchQuery) => {
+    requestService.query = searchQuery
+    clearCardsList()
+    requestService.getSearchMovies()
+        .then(addPaginationSearch)
+        .then(setResults)
+        .then(makefilterObjects)
+        .then(setValidatesPosterPath)
+        .then(setValidatesReleaseDate)
+        .then(makeValidatesGenreName)
+        .then(makeMarkupLibraryCardsList)
+        .then(makeMarkupCardMoreLoad)
+}
+
+makeGenresList();
+renderingTrendingCardsList()
+
+export { clearCardsList, renderingTrendingCardsList, renderingLibraryCardsList, renderingSearchCardsList}
+
